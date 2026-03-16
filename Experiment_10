@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo "------ Shell Script Demonstration ------"
+
+# Script name
+echo "Script name: $0"
+
+# Command line arguments
+echo "First argument: $1"
+echo "Second argument: $2"
+echo "Third argument: $3"
+
+# Number of arguments
+echo "Total number of arguments: $#"
+
+# Display all arguments
+echo "All arguments using \$*: $*"
+echo "All arguments using \$@: $@"
+
+# Addition using arguments
+if [ $# -ge 2 ]
+then
+    sum=$(($1 + $2))
+    echo "Sum of first two arguments: $sum"
+else
+    echo "Provide at least two numbers for addition."
+fi
+
+echo "----------------------------------------"
+
+# Example startup message
+echo "This script can also be added to .bashrc to run at terminal startup."
+echo "Welcome to the Linux System!"
